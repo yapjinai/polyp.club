@@ -1,7 +1,16 @@
 .App {
-  text-align: center;
-  color: blue;
   margin: auto;
 
-  font-size: 3cm;
+  text: {
+    align: center;
+    shadow: 2px 2px;
+  }
+  font: {
+    size: 3cm;
+  }
+  color: blue;
+
+  img {
+    width: 100%;
+  }
 }

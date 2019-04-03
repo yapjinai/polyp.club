@@ -1,8 +1,12 @@
 .App {
-  text-align: center;
-  color: blue;
   margin: auto;
+  text-align: center;
+  text-shadow: 2px 2px;
   font-size: 3cm;
+  color: blue;
+}
+.App img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */

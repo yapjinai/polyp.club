@@ -1,0 +1,8 @@
+.Whoracle .whoracleForm .whoracleInput {
+  font-size: 2cm;
+}
+.Whoracle .whoracleForm .whoracleInput::placeholder {
+  color: lightblue;
+}
+
+/*# sourceMappingURL=Whoracle.css.map */

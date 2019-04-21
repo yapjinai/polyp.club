@@ -1,0 +1,10 @@
+.Whoracle {
+  .whoracleForm {
+    .whoracleInput {
+      font-size: 2cm;
+      &::placeholder {
+        color: lightblue;
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ class Result extends Component {
 
         <div className="answer">
           Your results:
-          {this.renderImages()}
+          {this.state.images ? this.renderImages() : this.oracleFinished()}
         </div>
 
         <div className="reset">
@@ -37,6 +37,14 @@ class Result extends Component {
     this.consult(this.props.question);
   }
 
+  oracleFinished = () => {
+    return (
+      <h2>
+        The Oracle is done for today. Please try again tomorrow.
+      </h2>
+    )
+  }
+
   renderImages = () => {
     return (
       <ul>
@@ -48,14 +56,20 @@ class Result extends Component {
   consult = async (question) => {
     // Wiki API
     const queries = await questionToQueries(question)
-    console.log(await queries);
 
     // Google API
     for (const query of queries) {
       const image = await randomSearch(query);
-      this.setState({
-        images: [...this.state.images, image]
-      })
+      if (image) {
+        this.setState({
+          images: [...this.state.images, image]
+        })
+      }
+      else {
+        this.setState({
+          images: image
+        })
+      }
     }
   }
 

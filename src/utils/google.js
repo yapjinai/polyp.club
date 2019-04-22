@@ -8,21 +8,29 @@ const client = new imageSearch(CSE_ID, API_KEY);
 export default async function randomSearch(query) {
   const page = randomPage();
   const images = await search(query, page)
-  const image = await randomFromArray(images);
+  const image = (images ? await randomFromArray(images) : null);
   return await image;
 }
 
 export async function search(query, page=1) {
+  console.log("query:", query);
   let results;
   try {
-    console.log("try", page);
+    console.log("try page", page);
     results = await client.search(query, {page});
   }
   catch {
-    results = await client.search(query, {page: 1});
-    console.log("catch", results);
+    try {
+      results = await client.search(query, {page: 1});
+      console.log("catch", results);
+    }
+    catch {
+      console.log("catch #2");
+      results = null;
+    }
   }
-  const images = await results.map(r => r.url);
+
+  const images = (results ? await results.map(r => r.url) : null);
   return await images;
 }
 

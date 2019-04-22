@@ -1,0 +1,27 @@
+.App {
+  margin: auto;
+}
+.App img {
+  width: 100%;
+}
+.App .headerLink {
+  color: blue;
+  font-size: 3cm;
+  text-align: center;
+  text-shadow: 1px 2px hotpink, 2px 4px hotpink, 3px 6px hotpink, 4px 8px hotpink, 5px 10px hotpink, 6px 12px hotpink, 7px 14px hotpink, 8px 16px hotpink;
+  text-decoration: none;
+}
+.App .headerLink:hover {
+  text-decoration: underline;
+}
+.App .headerLink:active {
+  color: blue;
+  position: relative;
+  left: 6px;
+  top: 12px;
+  text-align: center;
+  text-shadow: 1px 2px hotpink, 2px 4px hotpink;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,24 @@
+.Result {
+  .answer {
+    ul {
+      list-style: none;
+      border: 1px solid lightgray;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        margin: 10px;
+        // display: flex;
+        flex-wrap: wrap;
+
+        img {
+          object-fit: contain;
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

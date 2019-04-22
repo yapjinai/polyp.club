@@ -48,6 +48,7 @@ class Result extends Component {
   consult = async (question) => {
     // Wiki API
     const queries = await questionToQueries(question)
+    console.log(await queries);
 
     // Google API
     for (const query of queries) {

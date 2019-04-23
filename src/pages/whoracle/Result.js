@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
-import randomSearch from '../../utils/google'
-import questionToQueries from '../../utils/questionToQueries'
-import '../../css/Result.css';
+import React, { Component } from "react";
+import randomSearch from "../../utils/google"
+import questionToQueries from "../../utils/questionToQueries"
+import "../../css/Result.css";
+
+const API_URL = "http://localhost:3000"
 
 class Result extends Component {
   constructor() {
     super();
     this.state = {
-      images: []
+      images: {}
     }
   }
 
   render() {
+    console.log(this.state.images);
     return (
       <div className="Result">
         <h2>Your question: {this.props.question}</h2>
@@ -37,43 +40,51 @@ class Result extends Component {
     this.consult(this.props.question);
   }
 
-  oracleFinished = () => {
-    return (
-      <h2>
-        The Oracle is done for today. Please try again tomorrow.
-      </h2>
-    )
-  }
-
-  renderImages = () => {
-    return (
-      <ul>
-        {this.displayImages()}
-      </ul>
-    )
-  }
-
   consult = async (question) => {
     // Wiki API
     const queries = await questionToQueries(question)
 
     // Google API
+    let images = [];
     for (const query of queries) {
       const image = await randomSearch(query);
-      if (image && this.state.images) {
-        this.setState({
-          images: {
-            ...this.state.images,
-            [query]: image
-          }
-        })
+      if (image && images) {
+        images.push(await image);
       }
       else {
-        this.setState({
-          images: image
-        })
+        images = image
       }
     }
+
+    this.setState({images})
+  }
+
+  renderImages = () => {
+    if (Object.keys(this.state.images).length) {
+      this.saveToApi()
+      return (
+        <ul>
+          {this.displayImages()}
+        </ul>
+      )
+    }
+  }
+
+  saveToApi = () => {
+    console.log(Object.values(this.state.images));
+    // fetch(`${API_URL}/readings`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Accept": "application/json",
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify({
+    //     question: this.props.question,
+    //     images: Object.values(this.state.images)
+    //   })
+    // })
+    // .then(r => r.json())
+    // .then(console.log)
   }
 
   displayImages = () => {
@@ -99,13 +110,19 @@ class Result extends Component {
 
   reset = (e) => {
     e.preventDefault();
-    // this.props.clearImages();
-    // this.props.setQuestion('');
     this.props.setWhoracleState("question", "");
     this.props.setWhoracleState("asked", false);
     this.setState({
       images: []
     })
+  }
+
+  oracleFinished = () => {
+    return (
+      <h2>
+      The Oracle has retired for the day. Please try again tomorrow.
+      </h2>
+    )
   }
 }
 

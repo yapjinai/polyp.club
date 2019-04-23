@@ -7,7 +7,7 @@
   width: 100%;
 }
 .Whoracle .whoracleForm .whoracleInput {
-  font-size: 2cm;
+  font-size: 2em;
 }
 .Whoracle .whoracleForm .whoracleInput::placeholder {
   color: lightblue;

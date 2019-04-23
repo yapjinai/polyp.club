@@ -35,7 +35,9 @@ class Ask extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.setWhoracleState("asked", true);
+    if (this.props.question) {
+      this.props.setWhoracleState("asked", true);
+    }
   }
 }
 

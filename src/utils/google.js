@@ -13,19 +13,15 @@ export default async function randomSearch(query) {
 }
 
 export async function search(query, page=1) {
-  console.log("query:", query);
   let results;
   try {
-    console.log("try page", page);
     results = await client.search(query, {page});
   }
   catch {
     try {
       results = await client.search(query, {page: 1});
-      console.log("catch", results);
     }
     catch {
-      console.log("catch #2");
       results = null;
     }
   }

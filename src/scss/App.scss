@@ -1,5 +1,40 @@
+@function three-d($color) {
+  @return (
+    1px 2px #{$color},
+    2px 4px #{$color},
+    3px 6px #{$color},
+    4px 8px #{$color},
+    5px 10px #{$color},
+    6px 12px #{$color},
+    7px 14px #{$color},
+    8px 16px #{$color}
+  );
+}
+@function three-d-pressed($color) {
+  @return (
+    1px 2px #{$color},
+    2px 4px #{$color},
+  );
+}
+
+@mixin hoverHeaderLink() {
+  &:hover {
+    text-shadow: three-d(cyan);
+  }
+  &:active {
+    text-shadow: three-d-pressed(cyan);
+    position: relative;
+    left: 6px;
+    top: 12px;
+  }
+}
+
 .App {
   margin: auto;
+  font: {
+    family: "Arial", sans;
+  }
+
   img {
     width: 100%;
   }
@@ -7,39 +42,16 @@
   .headerLink {
     color: blue;
     font: {
-      size: 3cm;
+      size: 3em;
     }
     text: {
-      align: center;
-      shadow:
-        1px 2px hotpink,
-        2px 4px hotpink,
-        3px 6px hotpink,
-        4px 8px hotpink,
-        5px 10px hotpink,
-        6px 12px hotpink,
-        7px 14px hotpink,
-        8px 16px hotpink;
+      shadow: three-d(hotpink);
       decoration: none;
+      align: center;
     }
+    
+    @include hoverHeaderLink();
 
-    &:hover {
-      color: blue;
-      text-decoration: underline;
-    }
-    &:active {
-      color: blue;
-      position: relative;
-      left: 6px;
-      top: 12px;
-      text: {
-        align: center;
-        shadow:
-          1px 2px hotpink,
-          2px 4px hotpink;
-        decoration: none;
-      }
-    }
     h1 {
       margin: 5%;
     }

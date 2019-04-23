@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import "../css/Whoracle.css";
+import "../../css/Whoracle.css";
 
-import Ask from './components/Ask';
-import Result from './components/Result';
+import Ask from './Ask';
+import Result from './Result';
 
 class Whoracle extends Component {
   constructor() {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./css/App.css";
 
 import Landing from "./pages/Landing";
-import Whoracle from "./pages/Whoracle";
+import Whoracle from "./pages/whoracle/Whoracle";
 import ErrorPage from "./pages/ErrorPage";
 
 class App extends Component {

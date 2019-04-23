@@ -48,7 +48,7 @@ class Result extends Component {
   renderImages = () => {
     return (
       <ul>
-        {this.state.images.map(this.mapUrlToImg)}
+        {this.displayImages()}
       </ul>
     )
   }
@@ -60,9 +60,12 @@ class Result extends Component {
     // Google API
     for (const query of queries) {
       const image = await randomSearch(query);
-      if (image) {
+      if (image && this.state.images) {
         this.setState({
-          images: [...this.state.images, image]
+          images: {
+            ...this.state.images,
+            [query]: image
+          }
         })
       }
       else {
@@ -73,14 +76,22 @@ class Result extends Component {
     }
   }
 
-  mapUrlToImg = (url) => {
+  displayImages = () => {
+    return (
+      Object.keys(this.state.images).map(query => {
+        return this.mapUrlToImg(this.state.images[query], query)
+      })
+    )
+  }
+
+  mapUrlToImg = (url, alt="") => {
     return (
       <li
         key={url}
       >
         <img
           src={url}
-          alt={url}
+          alt={alt}
         />
       </li>
     )

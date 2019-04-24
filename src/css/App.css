@@ -13,7 +13,6 @@
 }
 .App .headerLink:hover {
   color: blue;
-  text-decoration: underline;
 }
 .App .headerLink:active {
   color: blue;
@@ -22,7 +21,6 @@
   top: 12px;
   text-align: center;
   text-shadow: 1px 2px hotpink, 2px 4px hotpink;
-  text-decoration: none;
 }
 .App .headerLink h1 {
   margin: 5%;

@@ -49,9 +49,24 @@
       decoration: none;
       align: center;
     }
-    
+
     @include hoverHeaderLink();
 
+    &:hover {
+      color: blue;
+    }
+    &:active {
+      color: blue;
+      position: relative;
+      left: 6px;
+      top: 12px;
+      text: {
+        align: center;
+        shadow:
+          1px 2px hotpink,
+          2px 4px hotpink;
+      }
+    }
     h1 {
       margin: 5%;
     }

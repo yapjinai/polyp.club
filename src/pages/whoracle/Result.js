@@ -3,7 +3,8 @@ import randomSearch from "../../utils/google"
 import questionToQueries from "../../utils/questionToQueries"
 import "../../css/Result.css";
 
-const API_URL = "http://localhost:3000"
+const API_URL = "https://whoracle-api.herokuapp.com"
+// const API_URL = "http://localhost:3000"
 
 class Result extends Component {
   constructor() {

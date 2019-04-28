@@ -71,20 +71,21 @@ class Result extends Component {
   }
 
   saveToApi = () => {
-    console.log(Object.values(this.state.images));
-    // fetch(`${API_URL}/readings`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Accept": "application/json",
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     question: this.props.question,
-    //     images: Object.values(this.state.images)
-    //   })
-    // })
-    // .then(r => r.json())
-    // .then(console.log)
+    fetch(`${API_URL}/readings`, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        reading: {
+          question: this.props.question,
+          images: Object.values(this.state.images)
+        }
+      })
+    })
+    .then(r => r.json())
+    .then(console.log)
   }
 
   displayImages = () => {

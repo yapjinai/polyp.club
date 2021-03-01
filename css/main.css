@@ -1,0 +1,48 @@
+body {
+  background: pink;
+  margin: auto;
+  font-family: "Arial", sans;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  color: blue;
+  font-size: 3em;
+  text-shadow: 1px 2px hotpink, 2px 4px hotpink, 3px 6px hotpink, 4px 8px hotpink, 5px 10px hotpink, 6px 12px hotpink, 7px 14px hotpink, 8px 16px hotpink;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+header:hover {
+  color: blue;
+  text-shadow: 1px 2px cyan, 2px 4px cyan, 3px 6px cyan, 4px 8px cyan, 5px 10px cyan, 6px 12px cyan, 7px 14px cyan, 8px 16px cyan;
+}
+
+header:active {
+  color: blue;
+  position: relative;
+  left: 6px;
+  top: 12px;
+  text-align: center;
+  text-shadow: 1px 2px hotpink, 2px 4px hotpink;
+}
+
+article {
+  width: 50%;
+  padding: 100px;
+  color: blue;
+  border: 50px dotted skyblue;
+  font-size: 2.5em;
+}
+
+article:hover {
+  color: white;
+  border: 50px dotted hotpink;
+}

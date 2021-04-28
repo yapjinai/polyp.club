@@ -1,0 +1,13 @@
+---
+title: Paintings
+---
+<h1>Paintings</h1>
+  <div class="paintings-container">
+  {% for painting in site.paintings %}
+    <div class="paintings-child">
+      <a href="{{ painting.url }}">
+        <img src="{{ painting.image_url }}" class="painting-preview" />
+      </a>
+    </div>
+  {% endfor %}
+  </div>

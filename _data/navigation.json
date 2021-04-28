@@ -1,0 +1,5 @@
+[
+  { "name": "POLYP!", "link": "/" },
+  { "name": "Paintings", "link": "/paintings.html", "collection": "paintings" },
+  { "name": "Artists", "link": "/artists.html", "collection": "artists" },
+]

@@ -1,0 +1,13 @@
+---
+title: Polyp!
+---
+<h1>Artists</h1>
+
+<ul>
+  {% for artist in site.artists %}
+    <li>
+      <h2><a href="{{ artist.url }}">{{ artist.first_name }} {{ artist.last_name }}</a></h2>
+      <p>{{ artist.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>

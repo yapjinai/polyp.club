@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<script>
+  const previous = "{{ page.previous.url }}";
+  const next = "{{ page.next.url }}";
+  {% include painting.js %}
+</script>
+
+<h1>{{ page.name }}</h1>
+{% assign artist = site.artists | where: 'first_name', page.artist | first %}
+{% if artist %}
+<h2>by <a href="{{ artist.url }}">{{ artist.first_name }}</a></h2>
+{% endif %}
+
+
+<img src="{{ page.image_url }}" class="painting narrow-screen" />

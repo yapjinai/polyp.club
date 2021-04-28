@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pigeons</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script>
+      
+    </script>
+  </head>
+  <body>
+    <nav>
+  <ul>
+    
+    <li>
+
+      <a
+        href="/"
+        class="
+          
+          
+        "
+      >
+        POLYP!
+      </a>
+
+      
+
+    </li>
+    
+    <li>
+
+      <a
+        href="/paintings.html"
+        class="
+          
+          menu
+        "
+      >
+        Paintings
+      </a>
+
+      
+      <ul class="sublist">
+        
+        <li>
+          <a href="/paintings/dog.html" >
+            dog
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/easel.html" >
+            easel
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/flowers.html" >
+            flowers
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/lights.html" >
+            lights
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/march.html" >
+            March
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/missing-dog.html" >
+            missing dog
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/pablo.html" >
+            pablo
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/peeb.html" >
+            peeb
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/pigeons.html" class="current-subitem">
+            pigeons
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/seal.html" >
+            seal
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/untitled-i.html" >
+            Untitled
+          </a>
+        </li>
+        
+        <li>
+          <a href="/paintings/untitled-ii.html" >
+            Untitled
+          </a>
+        </li>
+        
+      </ul>
+      
+
+    </li>
+    
+    <li>
+
+      <a
+        href="/artists.html"
+        class="
+          
+          
+        "
+      >
+        Artists
+      </a>
+
+      
+
+    </li>
+    
+  </ul>
+</nav>
+
+    <main>
+      <script>
+  const previous = "/paintings/peeb.html";
+  const next = "/paintings/seal.html";
+  const ARROW_LEFT = 'ArrowLeft';
+const ARROW_RIGHT = 'ArrowRight';
+
+document.addEventListener('DOMContentLoaded', () => checkAspectRatio())
+window.addEventListener('resize', () => checkAspectRatio());
+document.addEventListener('keydown', (e) => navigatePrevAndNext(e));
+
+const checkAspectRatio = () => {
+  const painting = document.querySelector('.painting');
+  if (painting) {
+    const windowAspectRatio = window.innerWidth / window.innerHeight;
+    const imageAspectRatio = painting.width / painting.height;
+    const isWideScreen = windowAspectRatio > imageAspectRatio;
+    if (isWideScreen) {
+      painting.classList.remove('narrow-screen');
+      painting.classList.add('wide-screen');
+    }
+    else {
+      painting.classList.remove('wide-screen');
+      painting.classList.add('narrow-screen');
+    }
+  }
+}
+
+const navigatePrevAndNext = (e) => {
+  switch (e.code) {
+    case ARROW_LEFT:
+      window.location.assign(previous);
+      break;
+    case ARROW_RIGHT:
+      window.location.assign(next);
+      break;
+    default:
+      break;
+  }
+}
+
+</script>
+
+<h1>pigeons</h1>
+
+
+<h2>by <a href="/artists/jin_ai_yap.html">Jin Ai</a></h2>
+
+
+
+<img src="../assets/images/paintings/pigeons.jpg" class="painting narrow-screen" />
+
+    </main>
+  </body>
+</html>

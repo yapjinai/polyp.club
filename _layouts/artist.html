@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>{{ page.first_name }} {{ page.last_name }}</h1>
+
+{{ content }}
+
+{% assign filtered_paintings = site.paintings | where: 'artist', page.first_name %}
+{% if filtered_paintings.size > 0 %}
+<h2>Paintings</h2>
+<ul>
+  {% for painting in filtered_paintings %}
+    <li><a href="{{ painting.url }}">{{ painting.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

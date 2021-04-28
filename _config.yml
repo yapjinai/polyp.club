@@ -1,0 +1,21 @@
+collections:
+  paintings:
+    output: true
+  artists:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "paintings"
+    values:
+      layout: "painting"
+  - scope:
+      path: ""
+      type: "artists"
+    values:
+      layout: "artist"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

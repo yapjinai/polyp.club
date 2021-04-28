@@ -1,0 +1,31 @@
+<nav>
+  <ul>
+    {% for item in site.data.navigation %}
+    <li>
+
+      <a
+        href="{{ item.link }}"
+        class="
+          {% if page.url == item.link %}current{% endif %}
+          {% if page.url contains item.collection %}menu{% endif %}
+        "
+      >
+        {{ item.name }}
+      </a>
+
+      {% if page.url contains item.collection %}
+      <ul class="sublist">
+        {% for subitem in site[item.collection] %}
+        <li>
+          <a href="{{ subitem.url }}" {% if page.url == subitem.url %}class="current-subitem"{% endif %}>
+            {{ subitem.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

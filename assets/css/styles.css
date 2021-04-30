@@ -1,0 +1,29 @@
+body { font-family: sans-serif; }
+
+main { margin: auto; padding-left: 10vw; width: 80%; }
+
+ul { list-style: none; }
+
+a { color: royalblue; text-decoration: none; background: rgba(255, 255, 0, 0.5); }
+
+a:hover { color: red; background: rgba(255, 0, 255, 0.5); }
+
+nav { position: fixed; }
+
+nav .current { background: limegreen; }
+
+nav .current-subitem { background: pink; }
+
+.paintings-container { display: flex; align-items: stretch; height: 200px; }
+
+.paintings-child { flex: 1; margin: 20px; height: 100%; }
+
+.painting-preview { height: 100%; }
+
+.painting { position: absolute; left: 0; top: 0; z-index: -1; }
+
+.painting.narrow-screen { width: none; height: 100%; }
+
+.painting.wide-screen { width: 100%; height: none; }
+
+/*# sourceMappingURL=styles.css.map */

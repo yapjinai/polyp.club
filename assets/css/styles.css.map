@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n",
+		"body {\n  font-family: sans-serif;\n}\n\nmain {\n  margin: auto;\n  padding-left: 10vw;\n  width: 80%;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  color: royalblue;\n  text-decoration: none;\n  background: rgba(256,256,0,0.5);\n  &:hover {\n    color: red;\n    background: rgba(256,0,256,0.5);\n  }\n}\n\nnav {\n  position: fixed;\n\n  .current {\n    background: limegreen;\n  }\n  .current-subitem {\n    background: pink;\n  }\n}\n\n.paintings-container {\n  display: flex;\n  align-items: stretch;\n  height: 200px;\n}\n.paintings-child {\n  flex: 1;\n  margin: 20px;\n  height: 100%;\n}\n.painting-preview {\n  height: 100%;\n}\n\n.painting {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: -1;\n\n  &.narrow-screen {\n    width: none;\n    height: 100%;\n  }\n\n  &.wide-screen {\n    width: 100%;\n    height: none;\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,IAAI,CAAC,EACH,WAAW,EAAE,UAAU,GACxB;;AAED,AAAA,IAAI,CAAC,EACH,MAAM,EAAE,IAAI,EACZ,YAAY,EAAE,IAAI,EAClB,KAAK,EAAE,GAAG,GACX;;AAED,AAAA,EAAE,CAAC,EACD,UAAU,EAAE,IAAI,GACjB;;AAED,AAAA,CAAC,CAAC,EACA,KAAK,EAAE,SAAS,EAChB,eAAe,EAAE,IAAI,EACrB,UAAU,EAAE,sBAAmB,GAKhC;;AARD,AAIE,CAJD,CAIG,KAAK,CAAC,EACN,KAAK,EAAE,GAAG,EACV,UAAU,EAAE,sBAAmB,GAChC;;AAGH,AAAA,GAAG,CAAC,EACF,QAAQ,EAAE,KAAK,GAQhB;;AATD,AAGE,GAHC,CAGD,QAAQ,CAAC,EACP,UAAU,EAAE,SAAS,GACtB;;AALH,AAME,GANC,CAMD,gBAAgB,CAAC,EACf,UAAU,EAAE,IAAI,GACjB;;AAGH,AAAA,oBAAoB,CAAC,EACnB,OAAO,EAAE,IAAI,EACb,WAAW,EAAE,OAAO,EACpB,MAAM,EAAE,KAAK,GACd;;AACD,AAAA,gBAAgB,CAAC,EACf,IAAI,EAAE,CAAC,EACP,MAAM,EAAE,IAAI,EACZ,MAAM,EAAE,IAAI,GACb;;AACD,AAAA,iBAAiB,CAAC,EAChB,MAAM,EAAE,IAAI,GACb;;AAED,AAAA,SAAS,CAAC,EACR,QAAQ,EAAE,QAAQ,EAClB,IAAI,EAAE,CAAC,EACP,GAAG,EAAE,CAAC,EACN,OAAO,EAAE,EAAE,GAWZ;;AAfD,AAME,SANO,AAMN,cAAc,CAAC,EACd,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,GACb;;AATH,AAWE,SAXO,AAWN,YAAY,CAAC,EACZ,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,GACb"
+}

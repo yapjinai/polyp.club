@@ -10,7 +10,7 @@
           {% if page.url contains item.collection %}menu{% endif %}
         "
       >
-        {{ item.name }}
+        {{ item.title }}
       </a>
 
       {% if page.url contains item.collection %}
@@ -18,7 +18,7 @@
         {% for subitem in site[item.collection] %}
         <li>
           <a href="{{ subitem.url }}" {% if page.url == subitem.url %}class="current-subitem"{% endif %}>
-            {{ subitem.name }}
+            {{ subitem.title }}
           </a>
         </li>
         {% endfor %}

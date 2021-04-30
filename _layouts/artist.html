@@ -10,7 +10,7 @@ layout: default
 <h2>Paintings</h2>
 <ul>
   {% for painting in filtered_paintings %}
-    <li><a href="{{ painting.url }}">{{ painting.name }}</a></li>
+    <li><a href="{{ painting.url }}">{{ painting.title }}</a></li>
   {% endfor %}
 </ul>
 {% endif %}

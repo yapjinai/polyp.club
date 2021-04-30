@@ -1,5 +1,5 @@
 [
-  { "name": "POLYP!", "link": "/" },
-  { "name": "Paintings", "link": "/paintings.html", "collection": "paintings" },
-  { "name": "Artists", "link": "/artists.html", "collection": "artists" },
+  { "title": "POLYP!", "link": "/" },
+  { "title": "Paintings", "link": "/paintings.html", "collection": "paintings" },
+  { "title": "Artists", "link": "/artists.html", "collection": "artists" },
 ]

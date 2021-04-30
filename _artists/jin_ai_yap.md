@@ -1,5 +1,5 @@
 ---
-name: Jin Ai Yap
+title: Jin Ai Yap
 first_name: Jin Ai
 last_name: Yap
 ---

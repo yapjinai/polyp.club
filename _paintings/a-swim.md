@@ -1,5 +1,5 @@
 ---
-name: A swim
+title: A swim
 artist: Jin Ai
 image_url: ../assets/images/paintings/a-swim.jpg
 ---

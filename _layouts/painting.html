@@ -2,8 +2,8 @@
 layout: default
 ---
 <script>
-  const previous = "{{ page.previous.url }}";
-  const next = "{{ page.next.url }}";
+  const previous = "{{ page.previous.url}}" || "{{ site.paintings.last.url }}";
+  const next = "{{ page.next.url}}" || "{{ site.paintings.first.url }}";
   {% include painting.js %}
 </script>
 
@@ -11,7 +11,8 @@ layout: default
 {% assign artist = site.artists | where: 'first_name', page.artist | first %}
 {% if artist %}
 <h2>by <a href="{{ artist.url }}">{{ artist.first_name }}</a></h2>
+{% else %}
+<h2>by {{ page.artist }}</h2>
 {% endif %}
-
 
 <img src="{{ page.image_url }}" class="painting narrow-screen" />

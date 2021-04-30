@@ -1,6 +1,24 @@
 collections:
   paintings:
     output: true
+    order:
+      - peeb.md
+      - missing-dog.md
+      - a-swim.md
+      - lights.md
+      - untitled-i.md
+      - seal.md
+      - pigeons.md
+      - boy.md
+      - untitled-ii.md
+      - mouths.md
+      - dreams.md
+      - scary-monsters.md
+      - birds.md
+      - ih.md
+      - march.md
+      - untitled-iii.md
+      - pablo.md
   artists:
     output: true
 

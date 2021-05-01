@@ -20,7 +20,7 @@ nav .current-subitem { background: pink; }
 
 .painting-preview { height: 100%; }
 
-.painting { position: absolute; left: 0; top: 0; z-index: -1; }
+.painting { position: absolute; left: 0; top: 0; z-index: -1; cursor: default; }
 
 .painting.narrow-screen { width: none; height: 100%; }
 

@@ -2,8 +2,8 @@
 layout: default
 ---
 <script>
-  const previous = "{{ page.previous.url}}" || "{{ site.paintings.last.url }}";
-  const next = "{{ page.next.url}}" || "{{ site.paintings.first.url }}";
+  const previous = "{{ page.previous.url }}" || "{{ site.paintings.last.url }}";
+  const next = "{{ page.next.url }}" || "{{ site.paintings.first.url }}";
   {% include painting.js %}
 </script>
 
@@ -15,4 +15,4 @@ layout: default
 <h2>by {{ page.artist }}</h2>
 {% endif %}
 
-<img src="{{ page.image_url }}" class="painting narrow-screen" />
+<a href="{{ page.next.url }}"><img src="{{ page.image_url }}" class="painting narrow-screen" /></a>

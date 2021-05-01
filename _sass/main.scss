@@ -53,6 +53,8 @@ nav {
   top: 0;
   z-index: -1;
 
+  cursor: default;
+
   &.narrow-screen {
     width: none;
     height: 100%;

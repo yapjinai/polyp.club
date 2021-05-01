@@ -1,5 +1,5 @@
 ---
 title: Scary Monsters
 artist: Jin Ai
-image_url: ../assets/images/paintings/scary-monsters.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/scary-monsters.jpg
 ---

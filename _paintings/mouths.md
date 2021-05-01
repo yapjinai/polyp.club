@@ -1,5 +1,5 @@
 ---
 title: Mouths!
 artist: Jin Ai
-image_url: ../assets/images/paintings/mouths.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/mouths.jpg
 ---

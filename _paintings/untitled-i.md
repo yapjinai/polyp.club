@@ -1,5 +1,5 @@
 ---
 title: Untitled I
 artist: Jin Ai
-image_url: ../assets/images/paintings/self.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/self.jpg
 ---

@@ -1,5 +1,5 @@
 ---
 title: dreams
 artist: Jin Ai
-image_url: ../assets/images/paintings/dreams.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/dreams.jpg
 ---

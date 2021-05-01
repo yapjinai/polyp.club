@@ -1,5 +1,5 @@
 ---
 title: seal
 artist: Jin Ai
-image_url: ../assets/images/paintings/seal.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/seal.jpg
 ---

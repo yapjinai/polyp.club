@@ -1,5 +1,5 @@
 ---
 title: IH
 artist: Jin Ai
-image_url: ../assets/images/paintings/ih.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/ih.jpg
 ---

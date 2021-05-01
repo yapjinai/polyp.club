@@ -1,5 +1,5 @@
 ---
 title: birds
 artist: Jin Ai
-image_url: ../assets/images/paintings/birds.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/birds.jpg
 ---

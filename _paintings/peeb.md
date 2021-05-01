@@ -1,5 +1,5 @@
 ---
 title: peeb
 artist: Jin Ai
-image_url: ../assets/images/paintings/peeb.jpg
+image_url: https://polyp.s3.amazonaws.com/paintings/peeb.jpg
 ---

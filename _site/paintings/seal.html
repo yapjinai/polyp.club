@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seal</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script>
+      
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <script>
+  const BLOCK = "block";
+const NONE = "none";
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navMenuButton = document.querySelector('.nav-menu-button');
+  const navMenu = document.querySelector('.nav-menu');
+  const main = document.querySelector('main');
+
+  navMenuButton.addEventListener('click', () => toggleMenu({ navMenu }));
+  main.addEventListener('click', () => setMenuState({ navMenu, shouldOpen: false }));
+});
+
+const setMenuState = ({ navMenu, shouldOpen }) => {
+  navMenu.style.display = shouldOpen ? BLOCK : NONE;
+};
+
+const toggleMenu = ({ navMenu }) => {
+  const shouldOpen = navMenu.style.display !== BLOCK;
+  setMenuState({ navMenu, shouldOpen });
+};
+
+</script>
+
+<nav>
+  <div class='nav-menu-button'>
+    menu
+  </div>
+  <div class='nav-menu'>
+    <ul>
+      
+      <li>
+
+        <a
+          href="/"
+          class="
+            
+            
+          "
+        >
+          POLYP!
+        </a>
+
+        
+
+      </li>
+      
+      <li>
+
+        <a
+          href="/paintings.html"
+          class="
+            
+            menu
+          "
+        >
+          Paintings
+        </a>
+
+        
+        <ul class="sublist">
+          
+          <li>
+            <a href="/paintings/peeb.html" >
+              peeb
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/missing-dog.html" >
+              :(
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/untitled-i.html" >
+              Untitled I
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/mouths.html" >
+              Mouths!
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/seal.html" class="current-subitem">
+              seal
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/pigeons.html" >
+              pigeons
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/boy.html" >
+              boy
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/untitled-ii.html" >
+              Untitled II
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/ih.html" >
+              IH
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/a-swim.html" >
+              A swim
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/dreams.html" >
+              dreams
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/scary-monsters.html" >
+              Scary Monsters
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/lights.html" >
+              lights
+            </a>
+          </li>
+          
+        </ul>
+        
+
+      </li>
+      
+      <li>
+
+        <a
+          href="/artists.html"
+          class="
+            
+            
+          "
+        >
+          Artists
+        </a>
+
+        
+
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+      </aside>
+      <main>
+        <script>
+  const previous = "/paintings/mouths.html" || "/paintings/lights.html";
+  const next = "/paintings/pigeons.html" || "/paintings/peeb.html";
+  const ARROW_LEFT = 'ArrowLeft';
+const ARROW_RIGHT = 'ArrowRight';
+
+document.addEventListener('DOMContentLoaded', () => checkAspectRatio());
+window.addEventListener('resize', () => checkAspectRatio());
+document.addEventListener('keydown', (e) => navigatePrevAndNext(e));
+
+const checkAspectRatio = () => {
+  const painting = document.querySelector('.painting');
+  if (painting) {
+    const windowAspectRatio = window.innerWidth / window.innerHeight;
+    const imageAspectRatio = painting.width / painting.height;
+    const isWideScreen = windowAspectRatio > imageAspectRatio;
+    if (isWideScreen) {
+      painting.classList.remove('narrow-screen');
+      painting.classList.add('wide-screen');
+    }
+    else {
+      painting.classList.remove('wide-screen');
+      painting.classList.add('narrow-screen');
+    }
+  }
+};
+
+const navigatePrevAndNext = (e) => {
+  switch (e.code) {
+    case ARROW_LEFT:
+      window.location.assign(previous);
+      break;
+    case ARROW_RIGHT:
+      window.location.assign(next);
+      break;
+    default:
+      break;
+  }
+};
+
+</script>
+
+<h1>seal</h1>
+
+
+<h2>by <a href="/artists/jin_ai_yap.html">Jin Ai</a></h2>
+
+
+<a href="/paintings/pigeons.html"><img src="https://polyp.s3.amazonaws.com/paintings/seal.jpg" class="painting narrow-screen" /></a>
+
+      </main>
+    </div>
+  </body>
+</html>

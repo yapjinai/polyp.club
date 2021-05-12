@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: royalblue;
+  text-decoration: none;
+  background: rgba(256,256,0,0.5);
+  &:hover {
+    color: red;
+    background: rgba(256,0,256,0.5);
+  }
+}
+
+nav {
+  .current {
+    background: limegreen;
+  }
+  .current-subitem {
+    background: pink;
+  }
+}
+
+.nav-menu {
+  background: rgba(256,0,128,0.5);
+}
+
+.painting {
+  cursor: default;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-menu {
+    background: none;
+  }
+}

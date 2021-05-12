@@ -4,21 +4,17 @@ collections:
     order:
       - peeb.md
       - missing-dog.md
-      - a-swim.md
-      - lights.md
       - untitled-i.md
+      - mouths.md
       - seal.md
       - pigeons.md
       - boy.md
       - untitled-ii.md
-      - mouths.md
+      - ih.md
+      - a-swim.md
       - dreams.md
       - scary-monsters.md
-      - birds.md
-      - ih.md
-      - march.md
-      - untitled-iii.md
-      - pablo.md
+      - lights.md
   artists:
     output: true
 

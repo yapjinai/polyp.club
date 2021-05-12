@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pigeons</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script>
@@ -9,174 +10,182 @@
     </script>
   </head>
   <body>
-    <nav>
-  <ul>
-    
-    <li>
+    <div class="container">
+      <aside>
+        <script>
+  const BLOCK = "block";
+const NONE = "none";
 
-      <a
-        href="/"
-        class="
-          
-          
-        "
-      >
-        POLYP!
-      </a>
+document.addEventListener('DOMContentLoaded', () => {
+  const navMenuButton = document.querySelector('.nav-menu-button');
+  const navMenu = document.querySelector('.nav-menu');
+  const main = document.querySelector('main');
 
+  navMenuButton.addEventListener('click', () => toggleMenu({ navMenu }));
+  main.addEventListener('click', () => setMenuState({ navMenu, shouldOpen: false }));
+});
+
+const setMenuState = ({ navMenu, shouldOpen }) => {
+  navMenu.style.display = shouldOpen ? BLOCK : NONE;
+};
+
+const toggleMenu = ({ navMenu }) => {
+  const shouldOpen = navMenu.style.display !== BLOCK;
+  setMenuState({ navMenu, shouldOpen });
+};
+
+</script>
+
+<nav>
+  <div class='nav-menu-button'>
+    menu
+  </div>
+  <div class='nav-menu'>
+    <ul>
       
+      <li>
 
-    </li>
-    
-    <li>
+        <a
+          href="/"
+          class="
+            
+            
+          "
+        >
+          POLYP!
+        </a>
 
-      <a
-        href="/paintings.html"
-        class="
-          
-          menu
-        "
-      >
-        Paintings
-      </a>
+        
 
+      </li>
       
-      <ul class="sublist">
-        
-        <li>
-          <a href="/paintings/peeb.html" >
-            peeb
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/missing-dog.html" >
-            :(
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/a-swim.html" >
-            A swim
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/lights.html" >
-            lights
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/untitled-i.html" >
-            Untitled I
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/seal.html" >
-            seal
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/pigeons.html" class="current-subitem">
-            pigeons
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/boy.html" >
-            boy
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/untitled-ii.html" >
-            Untitled II
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/mouths.html" >
-            Mouths!
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/dreams.html" >
-            dreams
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/scary-monsters.html" >
-            Scary Monsters
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/birds.html" >
-            birds
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/ih.html" >
-            IH
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/march.html" >
-            March
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/untitled-iii.html" >
-            Untitled III
-          </a>
-        </li>
-        
-        <li>
-          <a href="/paintings/pablo.html" >
-            pablo
-          </a>
-        </li>
-        
-      </ul>
-      
+      <li>
 
-    </li>
-    
-    <li>
+        <a
+          href="/paintings.html"
+          class="
+            
+            menu
+          "
+        >
+          Paintings
+        </a>
 
-      <a
-        href="/artists.html"
-        class="
+        
+        <ul class="sublist">
           
+          <li>
+            <a href="/paintings/peeb.html" >
+              peeb
+            </a>
+          </li>
           
-        "
-      >
-        Artists
-      </a>
+          <li>
+            <a href="/paintings/missing-dog.html" >
+              :(
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/untitled-i.html" >
+              Untitled I
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/mouths.html" >
+              Mouths!
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/seal.html" >
+              seal
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/pigeons.html" class="current-subitem">
+              pigeons
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/boy.html" >
+              boy
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/untitled-ii.html" >
+              Untitled II
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/ih.html" >
+              IH
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/a-swim.html" >
+              A swim
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/dreams.html" >
+              dreams
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/scary-monsters.html" >
+              Scary Monsters
+            </a>
+          </li>
+          
+          <li>
+            <a href="/paintings/lights.html" >
+              lights
+            </a>
+          </li>
+          
+        </ul>
+        
 
+      </li>
       
+      <li>
 
-    </li>
-    
-  </ul>
+        <a
+          href="/artists.html"
+          class="
+            
+            
+          "
+        >
+          Artists
+        </a>
+
+        
+
+      </li>
+      
+    </ul>
+  </div>
 </nav>
 
-    <main>
-      <script>
-  const previous = "/paintings/seal.html" || "/paintings/pablo.html";
+      </aside>
+      <main>
+        <script>
+  const previous = "/paintings/seal.html" || "/paintings/lights.html";
   const next = "/paintings/boy.html" || "/paintings/peeb.html";
   const ARROW_LEFT = 'ArrowLeft';
 const ARROW_RIGHT = 'ArrowRight';
 
-document.addEventListener('DOMContentLoaded', () => checkAspectRatio())
+document.addEventListener('DOMContentLoaded', () => checkAspectRatio());
 window.addEventListener('resize', () => checkAspectRatio());
 document.addEventListener('keydown', (e) => navigatePrevAndNext(e));
 
@@ -195,7 +204,7 @@ const checkAspectRatio = () => {
       painting.classList.add('narrow-screen');
     }
   }
-}
+};
 
 const navigatePrevAndNext = (e) => {
   switch (e.code) {
@@ -208,7 +217,7 @@ const navigatePrevAndNext = (e) => {
     default:
       break;
   }
-}
+};
 
 </script>
 
@@ -220,6 +229,7 @@ const navigatePrevAndNext = (e) => {
 
 <a href="/paintings/boy.html"><img src="https://polyp.s3.amazonaws.com/paintings/pigeons.jpg" class="painting narrow-screen" /></a>
 
-    </main>
+      </main>
+    </div>
   </body>
 </html>

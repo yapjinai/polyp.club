@@ -1,7 +1,7 @@
 const ARROW_LEFT = 'ArrowLeft';
 const ARROW_RIGHT = 'ArrowRight';
 
-document.addEventListener('DOMContentLoaded', () => checkAspectRatio())
+document.addEventListener('DOMContentLoaded', () => checkAspectRatio());
 window.addEventListener('resize', () => checkAspectRatio());
 document.addEventListener('keydown', (e) => navigatePrevAndNext(e));
 
@@ -20,7 +20,7 @@ const checkAspectRatio = () => {
       painting.classList.add('narrow-screen');
     }
   }
-}
+};
 
 const navigatePrevAndNext = (e) => {
   switch (e.code) {
@@ -33,4 +33,4 @@ const navigatePrevAndNext = (e) => {
     default:
       break;
   }
-}
+};

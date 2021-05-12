@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yanbo Li</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script>
@@ -9,84 +10,116 @@
     </script>
   </head>
   <body>
-    <nav>
-  <ul>
-    
-    <li>
+    <div class="container">
+      <aside>
+        <script>
+  const BLOCK = "block";
+const NONE = "none";
 
-      <a
-        href="/"
-        class="
-          
-          
-        "
-      >
-        POLYP!
-      </a>
+document.addEventListener('DOMContentLoaded', () => {
+  const navMenuButton = document.querySelector('.nav-menu-button');
+  const navMenu = document.querySelector('.nav-menu');
+  const main = document.querySelector('main');
 
+  navMenuButton.addEventListener('click', () => toggleMenu({ navMenu }));
+  main.addEventListener('click', () => setMenuState({ navMenu, shouldOpen: false }));
+});
+
+const setMenuState = ({ navMenu, shouldOpen }) => {
+  navMenu.style.display = shouldOpen ? BLOCK : NONE;
+};
+
+const toggleMenu = ({ navMenu }) => {
+  const shouldOpen = navMenu.style.display !== BLOCK;
+  setMenuState({ navMenu, shouldOpen });
+};
+
+</script>
+
+<nav>
+  <div class='nav-menu-button'>
+    menu
+  </div>
+  <div class='nav-menu'>
+    <ul>
       
+      <li>
 
-    </li>
-    
-    <li>
+        <a
+          href="/"
+          class="
+            
+            
+          "
+        >
+          POLYP!
+        </a>
 
-      <a
-        href="/paintings.html"
-        class="
-          
-          
-        "
-      >
-        Paintings
-      </a>
+        
 
+      </li>
       
+      <li>
 
-    </li>
-    
-    <li>
+        <a
+          href="/paintings.html"
+          class="
+            
+            
+          "
+        >
+          Paintings
+        </a>
 
-      <a
-        href="/artists.html"
-        class="
+        
+
+      </li>
+      
+      <li>
+
+        <a
+          href="/artists.html"
+          class="
+            
+            menu
+          "
+        >
+          Artists
+        </a>
+
+        
+        <ul class="sublist">
           
-          menu
-        "
-      >
-        Artists
-      </a>
+          <li>
+            <a href="/artists/jin_ai_yap.html" >
+              Jin Ai Yap
+            </a>
+          </li>
+          
+          <li>
+            <a href="/artists/nicholas_wilson.html" >
+              Nicholas Wilson
+            </a>
+          </li>
+          
+          <li>
+            <a href="/artists/yanbo_li.html" class="current-subitem">
+              Yanbo Li
+            </a>
+          </li>
+          
+        </ul>
+        
 
+      </li>
       
-      <ul class="sublist">
-        
-        <li>
-          <a href="/artists/jin_ai_yap.html" >
-            Jin Ai Yap
-          </a>
-        </li>
-        
-        <li>
-          <a href="/artists/nicholas_wilson.html" >
-            Nicholas Wilson
-          </a>
-        </li>
-        
-        <li>
-          <a href="/artists/yanbo_li.html" class="current-subitem">
-            Yanbo Li
-          </a>
-        </li>
-        
-      </ul>
-      
-
-    </li>
-    
-  </ul>
+    </ul>
+  </div>
 </nav>
 
-    <main>
-      <h1>Yanbo Li</h1>
+      </aside>
+      <main>
+        <h1>Yanbo Li</h1>
 
 
 
@@ -94,6 +127,7 @@
 
 
 
-    </main>
+      </main>
+    </div>
   </body>
 </html>

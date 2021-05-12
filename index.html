@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polyp!</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script>
@@ -9,67 +10,100 @@
     </script>
   </head>
   <body>
-    <nav>
-  <ul>
-    
-    <li>
+    <div class="container">
+      <aside>
+        <script>
+  const BLOCK = "block";
+const NONE = "none";
 
-      <a
-        href="/"
-        class="
-          current
-          
-        "
-      >
-        POLYP!
-      </a>
+document.addEventListener('DOMContentLoaded', () => {
+  const navMenuButton = document.querySelector('.nav-menu-button');
+  const navMenu = document.querySelector('.nav-menu');
+  const main = document.querySelector('main');
 
+  navMenuButton.addEventListener('click', () => toggleMenu({ navMenu }));
+  main.addEventListener('click', () => setMenuState({ navMenu, shouldOpen: false }));
+});
+
+const setMenuState = ({ navMenu, shouldOpen }) => {
+  navMenu.style.display = shouldOpen ? BLOCK : NONE;
+};
+
+const toggleMenu = ({ navMenu }) => {
+  const shouldOpen = navMenu.style.display !== BLOCK;
+  setMenuState({ navMenu, shouldOpen });
+};
+
+</script>
+
+<nav>
+  <div class='nav-menu-button'>
+    menu
+  </div>
+  <div class='nav-menu'>
+    <ul>
       
+      <li>
 
-    </li>
-    
-    <li>
+        <a
+          href="/"
+          class="
+            current
+            
+          "
+        >
+          POLYP!
+        </a>
 
-      <a
-        href="/paintings.html"
-        class="
-          
-          
-        "
-      >
-        Paintings
-      </a>
+        
 
+      </li>
       
+      <li>
 
-    </li>
-    
-    <li>
+        <a
+          href="/paintings.html"
+          class="
+            
+            
+          "
+        >
+          Paintings
+        </a>
 
-      <a
-        href="/artists.html"
-        class="
-          
-          
-        "
-      >
-        Artists
-      </a>
+        
 
+      </li>
       
+      <li>
 
-    </li>
-    
-  </ul>
+        <a
+          href="/artists.html"
+          class="
+            
+            
+          "
+        >
+          Artists
+        </a>
+
+        
+
+      </li>
+      
+    </ul>
+  </div>
 </nav>
 
-    <main>
-      <h1 id="hello">Hello!</h1>
+      </aside>
+      <main>
+        <h1 id="hello">Hello!</h1>
 
 <p>Hello! We are a small group of NYC-based artist-friends.</p>
 
 <p><a href="mailto: polyp.club@gmail.com">Get in touch?</a></p>
 
-    </main>
+      </main>
+    </div>
   </body>
 </html>
